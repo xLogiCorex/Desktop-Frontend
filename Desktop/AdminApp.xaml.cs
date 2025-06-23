@@ -10,25 +10,43 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Desktop
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for AdminApp.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AdminApp : Window
     {
-        ServerConnection connection = new ServerConnection("http://127.1.1.1:3000");
-        public MainWindow()
+        public AdminApp()
         {
             InitializeComponent();
         }
-        void Login(object s, EventArgs e)
+        void Products(object s, EventArgs e)
         {
-            AdminApp b = new AdminApp() { Top = this.Top, Left = this.Left, Visibility = Visibility.Visible };
-            this.Close();
+            
         }
+        void Users(object s, EventArgs e)
+        {
+
+        }
+        void Partners(object s, EventArgs e)
+        {
+
+        }
+        void Orders(object s, EventArgs e)
+        {
+
+        }
+        void Invoices(object s, EventArgs e)
+        {
+
+        }
+        void Logs(object s, EventArgs e)
+        {
+
+        }
+
     }
 }
