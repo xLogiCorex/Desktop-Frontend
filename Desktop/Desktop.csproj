@@ -58,7 +58,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Message.cs" />
+    <Compile Include="Partner.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="ServerConnection.cs" />
+    <Compile Include="User.cs" />
     <Page Include="AdminApp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -18,6 +18,8 @@
             <Setter Property="Margin" Value="100 20 100 20"/>
             <Setter Property="FontSize" Value="20"/>
             <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Background" Value="#30336b"/>
+            <Setter Property="Foreground" Value="#dff9fb"/>
         </Style>
     </Window.Resources>
     <Grid>
