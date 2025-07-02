@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Desktop
 {
-    public class Partner
+    internal class Partner
     {
         public Partner() { }
         public Partner(string name, string email, string phone)

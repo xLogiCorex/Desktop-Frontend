@@ -6,11 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 
 namespace Desktop
 {
-    public class ServerConnection
+    internal class ServerConnection
     {
         private HttpClient client = new HttpClient();
         private string baseURL = "http://127.1.1.1:3000";

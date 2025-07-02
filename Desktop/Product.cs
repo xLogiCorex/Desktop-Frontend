@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Desktop
 {
-    public class Product
+    internal class Product
     {
         public Product() { }
         public Product(string name, int price)

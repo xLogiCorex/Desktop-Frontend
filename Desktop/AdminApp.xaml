@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop"
         mc:Ignorable="d"
-        Title="AdminApp" Height="800" Width="1600">
+        Title="Admin" Height="800" Width="1600" Background="#c7ecee" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="Label">
             <Setter Property="VerticalContentAlignment" Value="Center"/>

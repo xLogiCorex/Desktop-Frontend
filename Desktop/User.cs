@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Desktop
 {
-    public class User
+    internal class User
     {
         public User() { }
         public User(string name, string email, string password, string role)
