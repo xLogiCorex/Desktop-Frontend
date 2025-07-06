@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="Desktop.ProductsControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Desktop"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Height="Auto" Width="Auto" >       
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1.2*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- BAL OLDAL: Kereső + Lista -->
+        <StackPanel Grid.Column="0">
+            <!-- Kereső -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Keresés:" VerticalAlignment="Center"/>
+                <TextBox x:Name="SearchBox" Width="200" Margin="10,0,0,0" VerticalAlignment="Center" TextChanged="SearchBox_TextChanged"/>
+            </StackPanel>
+            <!-- Lista -->
+            <DataGrid x:Name="ProductsDataGrid"
+                      AutoGenerateColumns="False"
+                      IsReadOnly="True"
+                      CanUserAddRows="False"
+                      Height="380">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="auto"/>
+                    <DataGridTextColumn Header="SKU" Binding="{Binding sku}" Width="auto"/>
+                    <DataGridTextColumn Header="Név" Binding="{Binding name}" Width="auto"/>
+                    <DataGridTextColumn Header="Kategória" Binding="{Binding categoryName}" Width="auto"/>
+                    <DataGridTextColumn Header="Alkategória" Binding="{Binding subcategoryId}" Width="auto"/>
+                    <DataGridTextColumn Header="Mértékegység" Binding="{Binding unit}" Width="auto"/>
+                    <DataGridTextColumn Header="Ár" Binding="{Binding price}" Width="auto"/>
+                    <DataGridTextColumn Header="Mennyiség" Binding="{Binding stockQuantity}" Width="auto"/>
+                    <DataGridTextColumn Header="Minimáis mennyiség" Binding="{Binding minStockLevel}" Width="auto"/>
+                    <DataGridCheckBoxColumn Header="Aktív" Binding="{Binding isActive}" Width="auto"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+
+        <!-- JOBB OLDAL: Új termék űrlap -->
+        <Border Grid.Column="1" Padding="20" Background="#f1f2f6" CornerRadius="8">
+            <StackPanel>
+                <TextBlock Text="Új termék felvétel" FontWeight="Bold" FontSize="18" Margin="0,0,0,15"/>
+
+                <TextBlock Text="SKU:"/>
+                <TextBox x:Name="SkuBox" Width="200" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Név:"/>
+                <TextBox x:Name="NameBox" Width="200" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Kategória:"/>
+                <ComboBox x:Name="CategoryBox" Width="200" Margin="0,0,0,10"
+                  DisplayMemberPath="name" SelectedValuePath="id" SelectedIndex="-1"/>
+
+                <TextBlock Text="Alkategória:"/>
+                <TextBox x:Name="SubcategoryBox" Width="200" Margin="0,0,0,10"
+                />
+
+                <TextBlock Text="Mértékegység:"/>
+                <ComboBox x:Name="UnitBox" Width="200" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Ár:"/>
+                <TextBox x:Name="PriceBox" Width="200" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Mennyiség:"/>
+                <TextBox x:Name="StockQuantityBox" Width="200" Margin="0,0,0,10"/>
+
+                <TextBlock Text="Minimális mennyiség:"/>
+                <TextBox x:Name="MinStockLevelBox" Width="200" Margin="0,0,0,10"/>
+
+                <CheckBox x:Name="IsActiveBox" Content="Aktív" IsChecked="True" Margin="0,0,0,10"/>
+
+                <Button Content="Termék hozzáadása" Click="AddProduct_Click" Width="Auto" Padding="5" Background="#30336b" Foreground="White"/>
+            </StackPanel>
+        </Border>
+
+    </Grid>
+</UserControl>

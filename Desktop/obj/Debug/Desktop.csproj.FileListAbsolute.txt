@@ -1,0 +1,67 @@
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.AssemblyReference.cache
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\AdminApp.g.cs
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\MainWindow.g.cs
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\App.g.cs
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.cache
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.lref
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\bin\Debug\Desktop.exe.config
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\bin\Debug\Desktop.exe
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\bin\Debug\Desktop.pdb
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\AdminApp.baml
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\MainWindow.baml
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop.g.resources
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop.Properties.Resources.resources
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.GenerateResource.cache
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.Up2Date
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop.exe
+C:\Users\jambo\Source\Repos\Desktop-Frontend\Desktop\obj\Debug\Desktop.pdb
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\bin\Debug\Desktop.exe.config
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\bin\Debug\Desktop.exe
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\bin\Debug\Desktop.pdb
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.AssemblyReference.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\AdminApp.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\MainWindow.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\App.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.lref
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\AdminApp.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\MainWindow.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop.g.resources
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop.Properties.Resources.resources
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.GenerateResource.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.Up2Date
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop.exe
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend\Desktop\obj\Debug\Desktop.pdb
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\bin\Debug\Desktop.exe.config
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\bin\Debug\Desktop.exe
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\bin\Debug\Desktop.pdb
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.AssemblyReference.cache
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.exe.config
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\MainWindow.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\App.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.cache
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.lref
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\MainWindow.baml
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.g.resources
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.Properties.Resources.resources
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.GenerateResource.cache
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.Up2Date
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.exe
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.pdb
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\LoginWindow.baml
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\LoginWindow.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\ProductsControl.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\UsersControl.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\ProductsControl.baml
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\UsersControl.baml
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PartnersControl.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PartnersControl.baml
