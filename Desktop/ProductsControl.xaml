@@ -41,7 +41,7 @@
             </DataGrid>
         </StackPanel>
 
-        <!-- JOBB OLDAL: Új termék űrlap -->
+        <!-- JOBB OLDAL: Új felhasználó űrlap -->
         <Border Grid.Column="1" Padding="20" Background="#f1f2f6" CornerRadius="8">
             <StackPanel>
                 <TextBlock Text="Új termék felvétel" FontWeight="Bold" FontSize="18" Margin="0,0,0,15"/>

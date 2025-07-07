@@ -16,6 +16,9 @@ using System.Windows.Shapes;
 
 namespace Desktop
 {
+    /// <summary>
+    /// Interaction logic for PartnersControl.xaml
+    /// </summary>
     public partial class PartnersControl : UserControl
     {
         private ServerConnection connection;
@@ -45,10 +48,12 @@ namespace Desktop
             string searchText = SearchBox.Text.Trim().ToLower();
 
             if (string.IsNullOrEmpty(searchText))
+            {
                 PartnersDataGrid.ItemsSource = allPartners;
+            }
             else
             {
-                // Szűrés név, email,kapcsolattartó vagy adószám alapján
+                // Szűrés név, email vagy kapcsolattartó alapján
                 var filtered = allPartners.Where(u =>
                     (u.name != null && u.name.ToLower().Contains(searchText)) ||
                     (u.email != null && u.email.ToLower().Contains(searchText)) ||

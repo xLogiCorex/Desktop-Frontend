@@ -44,7 +44,6 @@ C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\bin\Debug\Desktop.pdb
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.AssemblyReference.cache
-C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.exe.config
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\MainWindow.g.cs
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\App.g.cs
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.cache

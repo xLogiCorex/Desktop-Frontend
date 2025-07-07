@@ -5,12 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Desktop"
         mc:Ignorable="d"
-<<<<<<< Updated upstream
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-=======
-        Title="MainWindow" Height="800" Width="1600" Background="#c7ecee" WindowStartupLocation="CenterScreen" >
+Title="MainWindow" Height="800" Width="1600" Background="#c7ecee" WindowStartupLocation="CenterScreen" >
     <Window.Resources>
         <Style TargetType="Label">
             <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -48,6 +43,6 @@
         <Border Grid.Row="1" Background="#dff9fb" Margin="20">
             <ContentControl x:Name="MainContent"/>
         </Border>
->>>>>>> Stashed changes
+
     </Grid>
 </Window>

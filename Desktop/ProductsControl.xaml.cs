@@ -7,6 +7,9 @@ using System.Windows.Controls;
 
 namespace Desktop
 {
+    /// <summary>
+    /// Interaction logic for ProductsControl.xaml
+    /// </summary>
     public partial class ProductsControl : UserControl
     {
         private ServerConnection connection;
@@ -45,6 +48,7 @@ namespace Desktop
                 var cat = categories.FirstOrDefault(c => c.id == product.categoryId);
                 product.categoryName = cat != null ? cat.name : "Ismeretlen";
             }
+
             ProductsDataGrid.ItemsSource = allProduct;
         }
 
@@ -97,16 +101,17 @@ namespace Desktop
                 return;
             }
 
-            // Alkategória
+            // Alkategória (egyelőre TextBox-ból, ha ComboBox kell, szólj!)
             int? subcategoryId = null;
             if (!string.IsNullOrWhiteSpace(SubcategoryBox.Text))
             {
+                // Ha számot vár a backend, próbáld konvertálni
                 if (int.TryParse(SubcategoryBox.Text.Trim(), out int scid))
                     subcategoryId = scid;
+                // Ha csak szöveg, akkor a Product osztályban string legyen a subcategoryId típusa!
             }
 
-
-
+            // További mezők validálása
             if (string.IsNullOrWhiteSpace(sku) || string.IsNullOrWhiteSpace(name))
             {
                 MessageBox.Show("SKU és név megadása kötelező!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
