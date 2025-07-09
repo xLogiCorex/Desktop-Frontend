@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\
 Desktop
 none
 false
 DEBUG;TRACE
-D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\App.xaml
-1219584333
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\App.xaml
+5-2144862088
 
-6-502434485
-13-1310406943
-MainWindow.xaml;
+161642262910
+14171824329
+LoginWindow.xaml;MainWindow.xaml;PartnersControl.xaml;ProductsControl.xaml;UsersControl.xaml;
 
-True
+False
 
