@@ -27,5 +27,6 @@ namespace Desktop
         public string message { get; set; }
 
         public string categoryName { get; set; }
+        public string subcategoryName { get; set; }
     }
 }

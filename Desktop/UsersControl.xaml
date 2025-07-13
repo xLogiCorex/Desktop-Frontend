@@ -1,4 +1,5 @@
 ﻿<UserControl x:Class="Desktop.UsersControl"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -49,8 +50,8 @@
                 <PasswordBox x:Name="PasswordBox" Width="200" Margin="0,0,0,10"/>
                 <TextBlock Text="Szerepkör:"/>
                 <ComboBox x:Name="RoleBox" Width="200" Margin="0,0,0,10" SelectedIndex="-1">
-                    <ComboBoxItem Content="admin" />
-                    <ComboBoxItem Content="sales" />
+                    <sys:String>admin</sys:String>
+                    <sys:String>sales</sys:String>
                 </ComboBox>
                 <CheckBox x:Name="IsActiveBox" Content="Aktív" IsChecked="True" Margin="0,0,0,10"/>
                 <Button Content="Felhasználó hozzáadása" Click="AddUser_Click" Width="Auto" Padding="5" Background="#30336b" Foreground="White"/>

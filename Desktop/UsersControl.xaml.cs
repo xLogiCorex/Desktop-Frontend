@@ -65,7 +65,7 @@ namespace Desktop
                 MessageBox.Show("Válassz szerepkört!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            string role = (RoleBox.SelectedItem as ComboBoxItem).Content.ToString();
+            string role = RoleBox.SelectedItem as string;
 
             bool isActive = IsActiveBox.IsChecked == true;
 
@@ -90,7 +90,9 @@ namespace Desktop
 
             // Küldés a szerverre
             bool success = await connection.PostUser(newUser);
-
+            foreach (var item in RoleBox.Items)
+                MessageBox.Show("Item: " + item?.ToString());
+            MessageBox.Show("SelectedItem: " + (RoleBox.SelectedItem?.ToString() ?? "null"));
             if (success)
             {
                 // Lista frissítése

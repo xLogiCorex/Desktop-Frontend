@@ -37,5 +37,17 @@ namespace Desktop
         void Invoices(object sender, RoutedEventArgs e) { }
         void Logs(object sender, RoutedEventArgs e) { }
 
+        private void LogoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            connection.Logout(); // Token és adatok törlése
+
+            // Login ablak megnyitása
+            var loginWindow = new LoginWindow();
+            loginWindow.Show();
+
+            // Főablak bezárása
+            this.Close();
+        }
+
     }
 }

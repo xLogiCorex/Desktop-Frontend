@@ -67,12 +67,21 @@
     <Compile Include="PartnersControl.xaml.cs">
       <DependentUpon>PartnersControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PostCategoryControl.xaml.cs">
+      <DependentUpon>PostCategoryControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostProductControl.xaml.cs">
+      <DependentUpon>PostProductControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PostSubcategoryControl.xaml.cs">
+      <DependentUpon>PostSubcategoryControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="ProductsControl.xaml.cs">
       <DependentUpon>ProductsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ServerConnection.cs" />
-    <Compile Include="SubCategory.cs" />
+    <Compile Include="Subcategory.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UsersControl.xaml.cs">
       <DependentUpon>UsersControl.xaml</DependentUpon>
@@ -94,6 +103,18 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PartnersControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostCategoryControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostProductControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PostSubcategoryControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -140,6 +161,18 @@
     <Resource Include="Assets\logo.png" />
     <Resource Include="Assets\ordersIcon.png" />
     <Resource Include="Assets\partnersIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\editIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\usersIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\logoutIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\logIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

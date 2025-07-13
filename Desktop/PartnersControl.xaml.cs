@@ -28,7 +28,6 @@ namespace Desktop
             InitializeComponent();
             this.connection = connection;
             Loaded += PartnerControl_Loaded;
-            MessageBox.Show("PartnersControl példányosítva");
         }
 
         private async void PartnerControl_Loaded(object sender, RoutedEventArgs e)
@@ -40,7 +39,6 @@ namespace Desktop
             PartnersDataGrid.ItemsSource = null;
             allPartners = await connection.GetPartners();
             PartnersDataGrid.ItemsSource = allPartners;
-
         }
 
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)

@@ -27,19 +27,45 @@ Title="MainWindow" Height="800" Width="1600" Background="#c7ecee" WindowStartupL
             <RowDefinition Height="2*"/>
             <RowDefinition Height="12*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="0.1*"/>
+        </Grid.ColumnDefinitions>
 
         <!-- Felső sor: menü -->
-        <StackPanel x:Name="MainMenuPanel" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center">
-            <Button Content="Felhasználók" Click="Users" Margin="40,30,0,30" Width="180" Height="60"/>
-            <Button Content="Termékek" Click="Products" Margin="20,30,0,30" Width="180" Height="60"/>
-            <Button Content="Partnerek" Click="Partners" Margin="20,30,0,30" Width="180" Height="60"/>
-            <Button Content="Rendelések" Click="Orders" Margin="20,30,0,30" Width="180" Height="60"/>
-            <Button Content="Számlák" Click="Invoices" Margin="20,30,0,30" Width="180" Height="60"/>
-            <Button Content="Napló" Click="Logs" Margin="20,30,0,30" Width="180" Height="60"/>
+        <StackPanel x:Name="MainMenuPanel" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" Height="150">
+
+            <Button x:Name="UsersButton" Click ="Users" Margin="40,30,0,30" Width="100" Height="50" Foreground="White" ToolTip="Felhasználók">
+                <Image Source="Assets/usersIcon.png" Width="50" Height="50" Stretch="Uniform"/>
+            </Button>
+
+            <Button x:Name="ProductButton" Click="Products" Margin="20,30,0,30" Width="100" Height="50" ToolTip="Termékek">
+                <Image Source="Assets/catalogueIcon.png" Width="50" Height="50" Stretch="Uniform"/>
+            </Button>
+
+            <Button x:Name="PartnersButton" Click="Partners" Margin="20,30,0,30" Width="100" Height="50" ToolTip="Partnerek">
+                <Image Source="Assets/partnersIcon.png" Width="50" Height="50" Stretch="Uniform"/>
+            </Button>
+
+            <Button x:Name="OrderButton" Click="Orders" Margin="20,30,0,30" Width="100" Height="50" ToolTip="Rendelések">
+                <Image Source="Assets/ordersIcon.png" Width="50" Height="50" Stretch="Uniform"/>
+            </Button>
+
+            <Button x:Name="InvoicingButton" Click="Invoices" Margin="20,30,0,30" Width="100" Height="50" ToolTip="Számlázás">
+                <Image Source="Assets/invoicingIcon.png" Width="50" Height="50" Stretch="Uniform"/>
+            </Button>
+
+            <Button x:Name="LogButton" Click="Logs" Margin="20,30,0,30" Width="100" Height="50" ToolTip="Log">
+                <Image Source="Assets/logIcon.png" Width="50" Height="50" Stretch="Uniform"/>
+            </Button>
+            
         </StackPanel>
+        <Button x:Name="LogoutButton" Click="LogoutButton_Click" Grid.Column="0" Width="100" Height="50" HorizontalAlignment="Right" ToolTip="Kijelentkezés">
+            <Image Source="Assets/logoutIcon.png" Width="50" Height="50" Stretch="Uniform"/>
+        </Button>
 
 
-        <!-- Alsó sor: tartalom -> ContentControlok -->
+        <!-- Alsó sor -->
         <Border Grid.Row="1" Background="#dff9fb" Margin="20">
             <ContentControl x:Name="MainContent"/>
         </Border>
