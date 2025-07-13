@@ -7,19 +7,12 @@ using System.Windows.Controls;
 
 namespace Desktop
 {
-    /// <summary>
-    /// Interaction logic for ProductsControl.xaml
-    /// </summary>
     public partial class ProductsControl : UserControl
     {
         private ServerConnection connection;
         private List<Product> allProduct = new List<Product>();
         private List<Category> categories = new List<Category>();
-        private List<string> units = new List<string>
-        {
-            "db", "kg", "dkg", "g", "liter", "ml", "csomag", "tálca",
-            "üveg", "doboz", "zacskó", "karton", "tekercs", "láb", "pár", "lap"
-        };
+        private List<Subcategory> subcategories = new List<Subcategory>();
 
         public ProductsControl(ServerConnection connection)
         {
@@ -31,11 +24,8 @@ namespace Desktop
         private async void ProductsControl_Loaded(object sender, RoutedEventArgs e)
         {
             await LoadCategoriesAsync();
+            await LoadSubcategoriesAsync();
             await LoadProductsAsync();
-           
-
-            UnitBox.ItemsSource = units;
-            UnitBox.SelectedIndex = -1;
         }
 
         public async Task LoadProductsAsync()
@@ -47,6 +37,9 @@ namespace Desktop
             {
                 var cat = categories.FirstOrDefault(c => c.id == product.categoryId);
                 product.categoryName = cat != null ? cat.name : "Ismeretlen";
+
+                var subcat = subcategories.FirstOrDefault(sc => sc.id == product.subcategoryId);
+                product.subcategoryName = subcat != null ? subcat.name : "Ismeretlen";
             }
 
             ProductsDataGrid.ItemsSource = allProduct;
@@ -55,115 +48,47 @@ namespace Desktop
         private async Task LoadCategoriesAsync()
         {
             categories = await connection.GetCategories();
-            CategoryBox.ItemsSource = categories;
-            CategoryBox.SelectedIndex = -1;
+        }
+
+        private async Task LoadSubcategoriesAsync()
+        {
+            subcategories = await connection.GetSubcategories();
         }
 
         private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             string searchText = SearchBox.Text.Trim().ToLower();
 
-            if (string.IsNullOrEmpty(searchText))
-            {
-                ProductsDataGrid.ItemsSource = allProduct;
-            }
+            if (string.IsNullOrEmpty(searchText)) ProductsDataGrid.ItemsSource = allProduct;
             else
             {
                 var filtered = allProduct.Where(u =>
                     (u.name != null && u.name.ToLower().Contains(searchText)) ||
-                    (u.sku != null && u.sku.ToLower().Contains(searchText))
-                ).ToList();
-
+                    (u.sku != null && u.sku.ToLower().Contains(searchText))).ToList();
                 ProductsDataGrid.ItemsSource = filtered;
             }
         }
 
-        private async void AddProduct_Click(object sender, RoutedEventArgs e)
+        private void ShowProductPanel_Click(object sender, RoutedEventArgs e)
         {
-            string sku = SkuBox.Text.Trim();
-            string name = NameBox.Text.Trim();
-            bool isActive = IsActiveBox.IsChecked == true;
-
-            // Kategória validáció
-            Category selectedCategory = CategoryBox.SelectedItem as Category;
-            if (selectedCategory == null)
-            {
-                MessageBox.Show("Válassz kategóriát!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            int categoryId = selectedCategory.id;
-
-            // Mértékegység validáció
-            string unit = UnitBox.SelectedItem as string;
-            if (string.IsNullOrWhiteSpace(unit))
-            {
-                MessageBox.Show("Válassz mértékegységet!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
-            // Alkategória (egyelőre TextBox-ból, ha ComboBox kell, szólj!)
-            int? subcategoryId = null;
-            if (!string.IsNullOrWhiteSpace(SubcategoryBox.Text))
-            {
-                // Ha számot vár a backend, próbáld konvertálni
-                if (int.TryParse(SubcategoryBox.Text.Trim(), out int scid))
-                    subcategoryId = scid;
-                // Ha csak szöveg, akkor a Product osztályban string legyen a subcategoryId típusa!
-            }
-
-            // További mezők validálása
-            if (string.IsNullOrWhiteSpace(sku) || string.IsNullOrWhiteSpace(name))
-            {
-                MessageBox.Show("SKU és név megadása kötelező!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
-            if (!int.TryParse(PriceBox.Text.Trim(), out int price))
-            {
-                MessageBox.Show("Az ár csak egész szám lehet!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            if (!int.TryParse(StockQuantityBox.Text.Trim(), out int stockQuantity))
-            {
-                MessageBox.Show("A mennyiség csak egész szám lehet!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            if (!int.TryParse(MinStockLevelBox.Text.Trim(), out int minStockLevel))
-            {
-                MessageBox.Show("A minimális mennyiség csak egész szám lehet!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-
-            var newProduct = new Product
-            {
-                sku = sku,
-                name = name,
-                categoryId = categoryId,
-                subcategoryId = subcategoryId ?? 0,
-                unit = unit,
-                price = price,
-                stockQuantity = stockQuantity,
-                minStockLevel = minStockLevel,
-                isActive = isActive
-            };
-
-            // Küldés a szerverre
-            bool success = await connection.PostProduct(newProduct);
-
-            if (success)
-            {
-                await LoadProductsAsync();
-                // Mezők ürítése
-                SkuBox.Text = "";
-                NameBox.Text = "";
-                CategoryBox.SelectedIndex = -1;
-                SubcategoryBox.Text = "";
-                UnitBox.SelectedIndex = -1;
-                PriceBox.Text = "";
-                StockQuantityBox.Text = "";
-                MinStockLevelBox.Text = "";
-                IsActiveBox.IsChecked = true;
-            }
+            var panel = new PostProductControl(connection, categories, subcategories);
+            panel.ProductAdded += async (s, ev) => await LoadProductsAsync(); // frissül a bal oldal minden gombnyomésra
+            RightPanelContent.Content = panel;
         }
+
+        private void ShowCategoryPanel_Click(object sender, RoutedEventArgs e)
+        {
+            var panel = new PostCategoryControl(connection, categories);
+            panel.CategoryAdded += async (s, ev) => await LoadCategoriesAsync();
+            RightPanelContent.Content = panel;
+        }
+
+        private void ShowSubcategoryPanel_Click(object sender, RoutedEventArgs e)
+        {
+            var panel = new PostSubcategoryControl(connection, categories);
+            panel.SubcategoryAdded += async (s, ev) => await LoadSubcategoriesAsync();
+            RightPanelContent.Content = panel;
+        }
+
     }
 }

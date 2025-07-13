@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Desktop
 {
-    public class SubCategory
+    public class Subcategory
     {
-        public SubCategory() { }
-        public SubCategory(string name, int categoryId)
+        public Subcategory() { }
+        public Subcategory(string name, int categoryId)
         {
             this.name = name;
         }

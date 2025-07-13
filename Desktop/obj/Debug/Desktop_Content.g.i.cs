@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("classes/majd.txt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("assets/logicon.png")]
 
 

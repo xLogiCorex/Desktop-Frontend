@@ -64,3 +64,10 @@ C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\ProductsCont
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\UsersControl.baml
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PartnersControl.g.cs
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PartnersControl.baml
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\Desktop.exe.config
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostProductControl.baml
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostProductControl.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostCategoryControl.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostSubcategoryControl.g.cs
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostCategoryControl.baml
+C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostSubcategoryControl.baml

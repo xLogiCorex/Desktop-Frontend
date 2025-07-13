@@ -66,6 +66,18 @@ namespace Desktop
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
         }
 
+
+        // Logout
+
+       
+
+           public void Logout()
+        {
+            jwtToken = null;
+            client.DefaultRequestHeaders.Authorization = null;
+        }
+        
+
         // ---------------------------------------TERMÉKEK-----------------------------------------------
 
 
@@ -99,7 +111,7 @@ namespace Desktop
                     newSku = oneProduct.sku,
                     newName = oneProduct.name,
                     newCategoryId = oneProduct.categoryId,
-                    newSubcategoryId = oneProduct.categoryId,
+                    newSubcategoryId = oneProduct.subcategoryId,
                     newUnit = oneProduct.unit,
                     newPrice = oneProduct.price,
                     newStockQuantity = oneProduct.stockQuantity,
@@ -314,5 +326,64 @@ namespace Desktop
             }
             return true;
         }
+
+        // ---------------------------------------Alkategóriák-----------------------------------------------
+
+
+        //Get Alkategória
+        public async Task<List<Subcategory>> GetSubcategories()
+        {
+            SetAuthHeader();
+            List<Subcategory> subCategoryList = new List<Subcategory>();
+            string url = baseURL + "/subcategories";
+
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseInString = await response.Content.ReadAsStringAsync();
+                subCategoryList = JsonConvert.DeserializeObject<List<Subcategory>>(responseInString);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return subCategoryList;
+        }
+
+        public async Task<bool> PostSubcategory(Subcategory oneSubcategory)
+        {
+            SetAuthHeader();
+            string url = baseURL + "/subcategories";
+            try
+            {
+                var jsonData = new
+                {
+                    newName = oneSubcategory.name,
+                    newCategoryId = oneSubcategory.categoryId
+                };
+                string jsonString = JsonConvert.SerializeObject(jsonData);
+                StringContent sendThis = new StringContent(jsonString, Encoding.UTF8, "Application/JSON");
+                HttpResponseMessage response = await client.PostAsync(url, sendThis);
+                if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+                {
+                    string errorMessage = await response.Content.ReadAsStringAsync();
+                    Message errorSubcategory = JsonConvert.DeserializeObject<Message>(errorMessage);
+                    MessageBox.Show(errorSubcategory.message, "Hiba a kategória létrehozásakor.");
+                    return false;
+                }
+                response.EnsureSuccessStatusCode();
+                string responseString = await response.Content.ReadAsStringAsync();
+                Message successSubcategory = JsonConvert.DeserializeObject<Message>(responseString);
+                MessageBox.Show(successSubcategory.message, "Alkategória sikeresen létrehozva.");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+            return true;
+        }
+
     }
 }
