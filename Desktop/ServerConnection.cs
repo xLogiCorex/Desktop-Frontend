@@ -20,11 +20,62 @@ namespace Desktop
         {
             baseURL = url;
         }
+
+        public async Task<object> connect(string urlString,string methodType, string jsonString = null)
+        {
+            string url = baseURL + urlString;
+            SetAuthHeader();
+            string valaszText = ""; ;
+            if ((methodType.ToLower() == "delete" || methodType.ToLower() == "get") && jsonString != null)
+            {
+                MessageBox.Show("Get és delete esetén nem küldhető adat");
+                return null;
+            }
+            try
+            {
+                HttpResponseMessage valasz = new HttpResponseMessage();
+                if (jsonString != null)
+                {
+                    StringContent sendThis = new StringContent(jsonString, Encoding.UTF8, "Application/JSON");
+                    if(methodType.ToLower() == "post")
+                    {
+                        valasz = await client.PostAsync(url, sendThis);
+                    }
+                    else if(methodType.ToLower() == "put")
+                    {
+                        valasz = await client.PutAsync(url, sendThis);
+                    }
+
+                }
+                else
+                {
+                    if(methodType.ToLower() == "get")
+                    {
+                        valasz = await client.GetAsync(url);
+                    }
+                    else if(methodType.ToLower() == "delete")
+                    {
+                        valasz = await client.DeleteAsync(url);
+                    }
+                }
+                // minden method type elküldte a kérést a szervernek, utána...
+                valaszText = await valasz.Content.ReadAsStringAsync();  // kiolvassuk a hibaüzenetet
+                valasz.EnsureSuccessStatusCode();   // és utána kiolvassuk a státusz kódot. Ha 4xx vagy 5xx, akkor ugrik a catch-be.
+                return valaszText;
+            }
+            catch (Exception e) 
+            {
+                Message message = JsonConvert.DeserializeObject<Message>(valaszText);
+                MessageBox.Show(message.message);
+                return null;
+            }
+            return null;
+        }
+
         // ---------------------------------------LOGIN-----------------------------------------------
 
         public async Task<User> Login(string email, string password)
         {
-            string url = baseURL + "/login";
             User oneUser = new User() { email = null };
             try
             {
@@ -34,43 +85,41 @@ namespace Desktop
                     newPassword = password,
                 };
 
-                string StringJSON = JsonConvert.SerializeObject(jsonData);
-                StringContent sendThis = new StringContent(StringJSON, Encoding.UTF8, "Application/JSON");
+                string data = JsonConvert.SerializeObject(jsonData);
+                object something = await connect("/login", "post", data);
 
-                HttpResponseMessage valasz = await client.PostAsync(url, sendThis);
-                valasz.EnsureSuccessStatusCode();
-                string valaszText = await valasz.Content.ReadAsStringAsync();
+                if(something is null)
+                {
+                    // nem volt sikeres a bejelentkezés
+                    return oneUser;
+                }
+                loginData response = JsonConvert.DeserializeObject<loginData>(something as string);
 
                 //token
-                dynamic response = JsonConvert.DeserializeObject(valaszText);
                 jwtToken = response.token;
 
                 oneUser.email = email;
                 oneUser.password = password;
                 oneUser.role = response.role;
-
-                return oneUser;
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                return oneUser;
             }
+            return oneUser;
         }
 
         // Token hitelesítés
         private void SetAuthHeader()
         {
-            client.DefaultRequestHeaders.Authorization = null;
-            if (!string.IsNullOrEmpty(jwtToken))
+            //client.DefaultRequestHeaders.Authorization = null;
+            if (!string.IsNullOrEmpty(jwtToken) && client.DefaultRequestHeaders.Authorization == null)      // ha a tokenem tartalmaz adatot és a client nem tartalmaz semmit, tehát null.
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", jwtToken);
         }
 
 
         // Logout
-
-       
-
+        
            public void Logout()
         {
             jwtToken = null;
@@ -84,16 +133,16 @@ namespace Desktop
         //Get Products
         public async Task<List<Product>> GetProduct()
         {
-            SetAuthHeader();
             List<Product> productList = new List<Product>();
-            string url = baseURL + "/products";
-
+            string url = "/products";
             try
             {
-                HttpResponseMessage response = await client.GetAsync(url);
-                response.EnsureSuccessStatusCode();
-                string responseInString = await response.Content.ReadAsStringAsync();
-                productList = JsonConvert.DeserializeObject<List<Product>>(responseInString);
+                object response = await connect(url, "get");
+                if(response is null)
+                {
+                    return productList;     // ez egy üres product list, mert hibás volt a lekérés        
+                }
+                productList = JsonConvert.DeserializeObject<List<Product>>(response as string);
             }
             catch (Exception e) { MessageBox.Show(e.Message); }
             return productList;
@@ -103,7 +152,7 @@ namespace Desktop
         public async Task<bool> PostProduct(Product oneProduct)
         {
             SetAuthHeader();
-            string url = baseURL + "/products";
+            string url = "/products";
             try
             {
                 var jsonData = new
@@ -119,19 +168,13 @@ namespace Desktop
                     newIsActive = oneProduct.isActive
                 };
                 string jsonString = JsonConvert.SerializeObject(jsonData);
-                StringContent sendThis = new StringContent(jsonString, Encoding.UTF8, "Application/JSON");
-                HttpResponseMessage response = await client.PostAsync(url, sendThis);
-                if (response.StatusCode == System.Net.HttpStatusCode.Conflict)
+                object response = await connect(url, "post", jsonString);
+                if(response is null)
                 {
-                    string errorMessage = await response.Content.ReadAsStringAsync();
-                    Message errorProduct = JsonConvert.DeserializeObject<Message>(errorMessage);
-                    MessageBox.Show(errorProduct.message, "Hiba a termék létrehozásakor.");
                     return false;
                 }
-                response.EnsureSuccessStatusCode();
-                string responseString = await response.Content.ReadAsStringAsync();
-                Message successProduct = JsonConvert.DeserializeObject<Message>(responseString);
-                MessageBox.Show(successProduct.message, "Termék sikeresen létrehozva.");
+                Message message = JsonConvert.DeserializeObject<Message>(response as string);
+                MessageBox.Show(message.message);
             }
             catch (Exception e)
             {
