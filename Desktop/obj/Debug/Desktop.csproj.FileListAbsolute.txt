@@ -104,3 +104,35 @@ C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Proje
 C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.csproj.Up2Date
 C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.exe
 C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.pdb
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\bin\Debug\Desktop.exe.config
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\bin\Debug\Desktop.exe
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\bin\Debug\Desktop.pdb
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.dll
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\bin\Debug\Newtonsoft.Json.xml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.AssemblyReference.cache
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\LoginWindow.baml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\PostProductControl.baml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\LoginWindow.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\MainWindow.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\PartnersControl.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\PostCategoryControl.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\PostProductControl.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\PostSubcategoryControl.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\ProductsControl.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\UsersControl.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\App.g.cs
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.cache
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop_MarkupCompile.lref
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\MainWindow.baml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\PartnersControl.baml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\PostCategoryControl.baml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\PostSubcategoryControl.baml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\ProductsControl.baml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\UsersControl.baml
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop.g.resources
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop.Properties.Resources.resources
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.GenerateResource.cache
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.CoreCompileInputs.cache
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop.csproj.Up2Date
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop.exe
+D:\Petra\Programozás\Iskolai projekt\Desktop-Frontend\Desktop\obj\Debug\Desktop.pdb
