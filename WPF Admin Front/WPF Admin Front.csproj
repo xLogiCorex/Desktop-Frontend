@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>WPF_Admin_Front</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\catalogueIcon.png" />
+    <Resource Include="Assets\editIcon.png" />
+    <Resource Include="Assets\idkIcon.png" />
+    <Resource Include="Assets\invoicingIcon.png" />
+    <Resource Include="Assets\logIcon.png" />
+    <Resource Include="Assets\logo.png" />
+    <Resource Include="Assets\logoutIcon.png" />
+    <Resource Include="Assets\ordersIcon.png" />
+    <Resource Include="Assets\partnersIcon.png" />
+    <Resource Include="Assets\usersIcon.png" />
+  </ItemGroup>
+
+</Project>

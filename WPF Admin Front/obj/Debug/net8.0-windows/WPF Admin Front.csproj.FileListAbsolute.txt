@@ -1,0 +1,38 @@
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\bin\Debug\net8.0-windows\WPF Admin Front.exe
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\bin\Debug\net8.0-windows\WPF Admin Front.deps.json
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\bin\Debug\net8.0-windows\WPF Admin Front.runtimeconfig.json
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\bin\Debug\net8.0-windows\WPF Admin Front.dll
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\bin\Debug\net8.0-windows\WPF Admin Front.pdb
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front_MarkupCompile.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front_MarkupCompile.lref
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.g.resources
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.AssemblyInfoInputs.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.AssemblyInfo.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.csproj.CoreCompileInputs.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.sourcelink.json
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.dll
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\refint\WPF Admin Front.dll
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.pdb
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.genruntimeconfig.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\ref\WPF Admin Front.dll
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admin Front.csproj.AssemblyReference.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\LoginWindow.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\PartnersControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\PostCategoryControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\PostProductControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\PostSubCategoryControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\ProductsControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\UsersControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\LoginWindow.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\PartnersControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\PostCategoryControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\PostProductControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\PostSubCategoryControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\ProductsControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\UsersControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admi.EA3B7E0E.Up2Date

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="LoginWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PartnersControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PostCategoryControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PostProductControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="PostSubcategoryControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ProductsControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UsersControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

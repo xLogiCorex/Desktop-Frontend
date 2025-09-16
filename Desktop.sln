@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop", "Desktop\Desktop.csproj", "{BA7B9180-7DEF-4BF2-A5CD-63A931C1E3CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF Admin Front", "WPF Admin Front\WPF Admin Front.csproj", "{7B6B3FFF-0BC0-49A1-BF96-FEC49ABC5E07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BA7B9180-7DEF-4BF2-A5CD-63A931C1E3CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA7B9180-7DEF-4BF2-A5CD-63A931C1E3CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA7B9180-7DEF-4BF2-A5CD-63A931C1E3CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B6B3FFF-0BC0-49A1-BF96-FEC49ABC5E07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B6B3FFF-0BC0-49A1-BF96-FEC49ABC5E07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B6B3FFF-0BC0-49A1-BF96-FEC49ABC5E07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B6B3FFF-0BC0-49A1-BF96-FEC49ABC5E07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
