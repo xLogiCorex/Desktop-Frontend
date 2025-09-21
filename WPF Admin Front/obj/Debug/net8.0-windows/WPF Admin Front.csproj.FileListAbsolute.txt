@@ -36,3 +36,5 @@ C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Proje
 C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\ProductsControl.baml
 C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\UsersControl.baml
 C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\WPF Admi.EA3B7E0E.Up2Date
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\OrdersControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\obj\Debug\net8.0-windows\OrdersControl.baml

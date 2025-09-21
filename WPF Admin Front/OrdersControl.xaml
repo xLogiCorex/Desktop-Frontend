@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="WPF_Admin_Front.OrdersControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_Admin_Front"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             Height="Auto" Width="Auto">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>  <!-- keresőmező -->
+            <RowDefinition Height="*"/>     <!-- Orders DataGrid -->
+            <RowDefinition Height="2*"/>    <!-- Order Items DataGrid (piros keret helye) -->
+        </Grid.RowDefinitions>
+
+        <!-- BAL OLDAL: Kereső + Lista -->
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                <Label Content="Keresés:" VerticalAlignment="Center"/>
+                <TextBox x:Name="SearchBox" Width="200" Margin="10,0,0,0" VerticalAlignment="Center" TextChanged="SearchBox_TextChanged"/>
+            </StackPanel>
+        <!-- Orders DataGrid -->
+            <DataGrid x:Name="OrdersDataGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" MouseDoubleClick="OrdersDataGrid_MouseDoubleClick" Height="380">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="auto"/>
+                    <DataGridTextColumn Header="Rendelésszám" Binding="{Binding orderNumber}" Width="auto"/>
+                    <DataGridTextColumn Header="Partner" Binding="{Binding partnerName}" Width="auto"/>
+                    <DataGridTextColumn Header="Létrehozta" Binding="{Binding userName}" Width="auto"/>
+                    <DataGridTextColumn Header="Létrehozás dátuma" Binding="{Binding date}" Width="auto"/>
+                    <DataGridTextColumn Header="Státusz" Binding="{Binding status}" Width="auto"/>
+                    <DataGridTextColumn Header="Számlaszám" Binding="{Binding invoiceId}" Width="auto"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <!-- Order Items DataGrid -->
+            <DataGrid x:Name="OrderItemsDataGrid"
+              Grid.Row="2"
+              AutoGenerateColumns="False"
+              IsReadOnly="True"
+              CanUserAddRows="False"
+              Margin="0,10,0,0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Termék" Binding="{Binding productName}" Width="*"/>
+                    <DataGridTextColumn Header="Mennyiség" Binding="{Binding quantity}" Width="auto"/>
+                    <DataGridTextColumn Header="Egységár" Binding="{Binding unitPrice}" Width="auto"/>
+                    <DataGridTextColumn Header="Összeg" Binding="{Binding totalPrice}" Width="auto"/>
+                </DataGrid.Columns>
+            </DataGrid>
+    </Grid>
+</UserControl>

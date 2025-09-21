@@ -427,5 +427,54 @@ namespace WPF_Admin_Front
             }
             return true;
         }
+
+        // ---------------------------------------Rendelések-----------------------------------------------
+
+        //Get Rendelések
+        public async Task<List<Orders>> GetOrders()
+        {
+            SetAuthHeader();
+            List<Orders> orderList = new List<Orders>();
+            string url = baseURL + "/orders";
+
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseInString = await response.Content.ReadAsStringAsync();
+                orderList = JsonConvert.DeserializeObject<List<Orders>>(responseInString);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return orderList;
+        }
+        // ---------------------------------------Rendelés részletei-----------------------------------------------
+
+        //Get Rendelések
+        public async Task<List<OrderItem>> GetOrderItems(int orderId)
+        {
+            SetAuthHeader();
+            List<OrderItem> itemsList = new List<OrderItem>();
+            string url = baseURL + $"/orders/{orderId}";
+
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseString = await response.Content.ReadAsStringAsync();
+                var json = JObject.Parse(responseString);
+                var items = json["items"].ToString();
+                itemsList = JsonConvert.DeserializeObject<List<OrderItem>>(items);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+
+            return itemsList;
+        }
+
     }
 }
