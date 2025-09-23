@@ -9,18 +9,21 @@
              Height="Auto" Width="Auto">
     <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>    <!-- Cím -->
             <RowDefinition Height="Auto"/>  <!-- keresőmező -->
             <RowDefinition Height="*"/>     <!-- Orders DataGrid -->
             <RowDefinition Height="2*"/>    <!-- Order Items DataGrid (piros keret helye) -->
         </Grid.RowDefinitions>
-
-        <!-- BAL OLDAL: Kereső + Lista -->
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <Label Content="Keresés:" VerticalAlignment="Center"/>
-                <TextBox x:Name="SearchBox" Width="200" Margin="10,0,0,0" VerticalAlignment="Center" TextChanged="SearchBox_TextChanged"/>
-            </StackPanel>
+        <!-- Cím -->
+        <TextBlock Text="Megrendelések" FontWeight="Bold" FontSize="18" Margin="0,0,0,10" Grid.Row="0"/>
+        <!-- Kereső + Lista -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10" Grid.Row="1">
+            <Label Content="Keresés:" VerticalAlignment="Center"/>
+            <TextBox x:Name="SearchBox" Width="200" Margin="10,0,0,0" VerticalAlignment="Center" TextChanged="SearchBox_TextChanged"/>
+            <Button Content="Teljesítve" Padding="2" Height="25" Width="Auto" Margin="40,10,0,10" Click="OrderCompleted_Click" FontSize="12"/>
+        </StackPanel>
         <!-- Orders DataGrid -->
-            <DataGrid x:Name="OrdersDataGrid" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" MouseDoubleClick="OrdersDataGrid_MouseDoubleClick" Height="380">
+            <DataGrid x:Name="OrdersDataGrid" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" CanUserAddRows="False" MouseDoubleClick="OrdersDataGrid_MouseDoubleClick" Height="auto">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="auto"/>
                     <DataGridTextColumn Header="Rendelésszám" Binding="{Binding orderNumber}" Width="auto"/>
@@ -28,12 +31,12 @@
                     <DataGridTextColumn Header="Létrehozta" Binding="{Binding userName}" Width="auto"/>
                     <DataGridTextColumn Header="Létrehozás dátuma" Binding="{Binding date}" Width="auto"/>
                     <DataGridTextColumn Header="Státusz" Binding="{Binding status}" Width="auto"/>
-                    <DataGridTextColumn Header="Számlaszám" Binding="{Binding invoiceId}" Width="auto"/>
+                    <DataGridTextColumn Header="Számlaszám" Binding="{Binding invoiceNumber}" Width="auto"/>
                 </DataGrid.Columns>
             </DataGrid>
             <!-- Order Items DataGrid -->
             <DataGrid x:Name="OrderItemsDataGrid"
-              Grid.Row="2"
+              Grid.Row="3"
               AutoGenerateColumns="False"
               IsReadOnly="True"
               CanUserAddRows="False"

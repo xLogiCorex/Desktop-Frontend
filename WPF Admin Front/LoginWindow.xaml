@@ -51,7 +51,7 @@
 
 
             <Label Content="Email" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Center"/>
-            <TextBox Name="emailInput" Grid.Column="1" Grid.Row="0" Width="280" HorizontalAlignment="Left"/>
+            <TextBox Text="admin" Name="emailInput" Grid.Column="1" Grid.Row="0" Width="280" HorizontalAlignment="Left"/>
             <Label Content="Jelszó" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center"/>
             <PasswordBox Name="passwordInput" Grid.Column="1" Grid.Row="1" Width="280" HorizontalAlignment="Left"/>
 

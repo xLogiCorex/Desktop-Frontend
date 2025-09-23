@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\WPF Admin Front\App.xaml
-91967205155
+11-38151362
 
-22-796970594
+26-1002157188
 199865607812
-LoginWindow.xaml;MainWindow.xaml;OrdersControl.xaml;PartnersControl.xaml;PostCategoryControl.xaml;PostProductControl.xaml;PostSubcategoryControl.xaml;ProductsControl.xaml;UsersControl.xaml;
+InvoicesControl.xaml;LoginWindow.xaml;LogsControls.xaml;MainWindow.xaml;OrdersControl.xaml;PartnersControl.xaml;PostCategoryControl.xaml;PostProductControl.xaml;PostSubcategoryControl.xaml;ProductsControl.xaml;UsersControl.xaml;
 
 False
 

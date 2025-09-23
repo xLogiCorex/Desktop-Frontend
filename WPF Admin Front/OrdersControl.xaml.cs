@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,18 +26,20 @@ namespace WPF_Admin_Front
         private List<Partner> partners = new List<Partner>();
         private List<User> users = new List<User>();
         private List<Product> allProducts = new List<Product>();
-        //private List<Invoice> invoices = new List<Invoice>();
+        private List<Invoices> invoices = new List<Invoices>();
 
         public OrdersControl(ServerConnection connection)
         {
             InitializeComponent();
             this.connection = connection;
             Loaded += OrdersControl_Loaded;
+
         }
-        private async void OrdersControl_Loaded(object sender, RoutedEventArgs e)
+        private async void OrdersControl_Loaded(object s, RoutedEventArgs e)
         {
             await LoadPartnersAsync();
             await LoadUsersAsync();
+            await LoadInvoicesAsync();
             await LoadOrdersAsync();
             await LoadProductsAsync();
         }
@@ -53,13 +56,13 @@ namespace WPF_Admin_Front
                 var user = users.FirstOrDefault(u => u.id == order.userId);
                 order.userName = user != null ? user.name : "Ismeretlen felhasználó";
 
-                //var invoice = invoices.FirstOrDefault(i => i.id == order.invoiceId);
-                //order.invoiceNumber = invoice != null ? invoice.invoiceNumber : "";
+                var invoice = invoices.FirstOrDefault(i => i.id == order.invoiceId);
+                order.invoiceNumber = invoice != null ? invoice.invoiceNumber : "Nincs számla";
             }
 
             OrdersDataGrid.ItemsSource = allOrders;
         }
-        private void SearchBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void SearchBox_TextChanged(object s, TextChangedEventArgs e)
         {
             string searchText = SearchBox.Text.Trim().ToLower();
 
@@ -72,19 +75,11 @@ namespace WPF_Admin_Front
                 OrdersDataGrid.ItemsSource = filtered;
             }
         }
-        private async Task LoadPartnersAsync()
-        {
-            partners = await connection.GetPartners();
-        }
-        private async Task LoadUsersAsync()
-        {
-            users = await connection.GetUsers();
-        }
-        private async Task LoadProductsAsync()
-        {
-            allProducts = await connection.GetProduct();
-        }
-        private async void OrdersDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private async Task LoadPartnersAsync() => partners = await connection.GetPartners();        
+        private async Task LoadUsersAsync() => users = await connection.GetUsers();
+        private async Task LoadProductsAsync() => allProducts = await connection.GetProduct();
+        private async Task LoadInvoicesAsync() => invoices = await connection.GetInvoices();
+        private async void OrdersDataGrid_MouseDoubleClick(object s, MouseButtonEventArgs e)
         {
             if (OrdersDataGrid.SelectedItem is Orders selectedOrder)
             {
@@ -100,6 +95,31 @@ namespace WPF_Admin_Front
                 OrderItemsDataGrid.ItemsSource = orderItems;
             }
         }
+        private async void OrderCompleted_Click(object s, EventArgs e)
+        {
+            if (OrdersDataGrid.SelectedItem is Orders selectedOrder)
+            {
+                selectedOrder.status = "Completed";
+                OrdersDataGrid.Items.Refresh();
+
+                try
+                {
+                    await connection.OrderAsCompletedAsync(selectedOrder.id);
+                    MessageBox.Show("A rendelés státusza 'Completed'-re állítva és a számla generálva.", "Siker", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Hiba történt: {ex.Message}", "Hiba", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Kérlek, válassz ki egy rendelést a listából!", "Figyelem", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+        }
+
+
     }
     
 }

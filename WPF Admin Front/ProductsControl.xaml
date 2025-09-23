@@ -8,46 +8,54 @@
              d:DesignHeight="450" d:DesignWidth="800"
              Height="Auto" Width="Auto" >
     <Grid Margin="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="1.2*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>    <!-- Cím -->
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Termékek" FontWeight="Bold" FontSize="18" Margin="0,0,0,10" Grid.Row="0"/>
+            <TextBlock Text="Termékek" FontWeight="Bold" FontSize="18" Margin="0,0,0,10"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="1.2*"/>
+            </Grid.ColumnDefinitions>
 
-        <!-- BAL OLDAL: Kereső + Lista -->
-        <StackPanel Grid.Column="0">
-            <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-                <Label Content="Keresés:" VerticalAlignment="Center"/>
-                <TextBox x:Name="SearchBox" Width="200" Margin="10,0,0,0" VerticalAlignment="Center" TextChanged="SearchBox_TextChanged"/>
-                <Button x:Name="EditButton" Width="40" Height="38" Margin="100,0,0,0" ToolTip="Szerkesztés" Background="#c7ecee">
-                    <Image Source="Assets/editIcon.png" Width="40" Height="36" Stretch="Uniform"/>
-                </Button>
+            <!-- BAL OLDAL: Kereső + Lista -->
+            <StackPanel Grid.Column="0">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                    <Label Content="Keresés:" VerticalAlignment="Center"/>
+                    <TextBox x:Name="SearchBox" Width="200" Margin="10,0,0,0" VerticalAlignment="Center" TextChanged="SearchBox_TextChanged"/>
+                    <Button x:Name="EditButton" Width="40" Height="38" Margin="100,0,0,0" ToolTip="Szerkesztés" Background="#c7ecee">
+                        <Image Source="Assets/editIcon.png" Width="40" Height="36" Stretch="Uniform"/>
+                    </Button>
+                </StackPanel>
+
+                <DataGrid x:Name="ProductsDataGrid"  AutoGenerateColumns="False"  IsReadOnly="False" CanUserAddRows="True" Height="380">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="auto"/>
+                        <DataGridTextColumn Header="SKU" Binding="{Binding sku}" Width="auto"/>
+                        <DataGridTextColumn Header="Név" Binding="{Binding name}" Width="auto"/>
+                        <DataGridTextColumn Header="Kategória" Binding="{Binding categoryName}" Width="auto"/>
+                        <DataGridTextColumn Header="Alkategória" Binding="{Binding subcategoryName}" Width="auto"/>
+                        <DataGridTextColumn Header="Mértékegység" Binding="{Binding unit}" Width="auto"/>
+                        <DataGridTextColumn Header="Ár" Binding="{Binding price}" Width="auto"/>
+                        <DataGridTextColumn Header="Mennyiség" Binding="{Binding stockQuantity}" Width="auto"/>
+                        <DataGridTextColumn Header="Minimáis mennyiség" Binding="{Binding minStockLevel}" Width="auto"/>
+                        <DataGridCheckBoxColumn Header="Aktív" Binding="{Binding isActive}" Width="auto"/>
+                    </DataGrid.Columns>
+                </DataGrid>
             </StackPanel>
 
-            <DataGrid x:Name="ProductsDataGrid"  AutoGenerateColumns="False"  IsReadOnly="False" CanUserAddRows="True" Height="380">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="auto"/>
-                    <DataGridTextColumn Header="SKU" Binding="{Binding sku}" Width="auto"/>
-                    <DataGridTextColumn Header="Név" Binding="{Binding name}" Width="auto"/>
-                    <DataGridTextColumn Header="Kategória" Binding="{Binding categoryName}" Width="auto"/>
-                    <DataGridTextColumn Header="Alkategória" Binding="{Binding subcategoryName}" Width="auto"/>
-                    <DataGridTextColumn Header="Mértékegység" Binding="{Binding unit}" Width="auto"/>
-                    <DataGridTextColumn Header="Ár" Binding="{Binding price}" Width="auto"/>
-                    <DataGridTextColumn Header="Mennyiség" Binding="{Binding stockQuantity}" Width="auto"/>
-                    <DataGridTextColumn Header="Minimáis mennyiség" Binding="{Binding minStockLevel}" Width="auto"/>
-                    <DataGridCheckBoxColumn Header="Aktív" Binding="{Binding isActive}" Width="auto"/>
-                </DataGrid.Columns>
-            </DataGrid>
-        </StackPanel>
+            <!-- középső menü gombok -->
+            <StackPanel Grid.Column="1" Grid.Row="0">
+                <Button Content="Termék" Padding="5" Width="Auto" Margin="10,0,0,10" Click="ShowProductPanel_Click"/>
+                <Button Content="Kategória" Padding="5" Width="Auto" Margin="10,0,0,10" Click="ShowCategoryPanel_Click"/>
+                <Button Content="Alkategória" Padding="5" Width="Auto" Margin="10,0,0,0" Click="ShowSubcategoryPanel_Click"/>
+            </StackPanel>
 
-        <!-- középső menü gombok -->
-        <StackPanel Grid.Column="1" Grid.Row="0">
-            <Button Content="Termék" Padding="5" Width="Auto" Margin="10,0,0,10" Click="ShowProductPanel_Click"/>
-            <Button Content="Kategória" Padding="5" Width="Auto" Margin="10,0,0,10" Click="ShowCategoryPanel_Click"/>
-            <Button Content="Alkategória" Padding="5" Width="Auto" Margin="10,0,0,0" Click="ShowSubcategoryPanel_Click"/>
-        </StackPanel>
-
-        <!-- Új termék panel (gombokkal lapozható, backend még nincs kész hozzá.) -->
-        <ContentControl x:Name="RightPanelContent" Grid.Column="2"/>
+            <!-- Új termék panel  -->
+            <ContentControl x:Name="RightPanelContent" Grid.Column="2"/>
+        </Grid>
     </Grid>
 </UserControl>

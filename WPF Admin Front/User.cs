@@ -16,7 +16,7 @@ namespace WPF_Admin_Front
             this.password = password;
             this.role = role;
         }
-        public string id { get; set; }
+        public Guid id { get; set; }
         public string name { get; set; }
         public string email { get; set; }
         public string password { get; set; }

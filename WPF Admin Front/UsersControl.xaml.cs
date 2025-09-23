@@ -29,8 +29,6 @@ namespace WPF_Admin_Front
             this.connection = connection;
             Loaded += UsersControl_Loaded;
         }
-
-
         private async void UsersControl_Loaded(object sender, RoutedEventArgs e)
         {
             await LoadUsersAsync();
@@ -118,5 +116,29 @@ namespace WPF_Admin_Front
                 IsActiveBox.IsChecked = true;
             }
         }
+        private async void UsersDataGrid_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            if (e.Column is DataGridCheckBoxColumn)
+            {
+                var user = e.Row.Item as User;
+                if (user != null)
+                {
+                    bool success = await connection.UpdateUserStatus(user.id, user.isActive);
+                    if (!success)
+                    {
+                        MessageBox.Show("Nem sikerült a státusz módosítása!");
+                        user.isActive = !user.isActive;
+                        UsersDataGrid.Items.Refresh();
+                    }
+                    else
+                    {
+                        UsersDataGrid.Items.Refresh();
+                        MessageBox.Show("Státusz módosítva!");
+                    }
+                }
+            }
+        }
+
+
     }
 }

@@ -18,7 +18,7 @@ namespace WPF_Admin_Front
         public string sku { get; set; }
         public string name { get; set; }
         public int categoryId { get; set; }
-        public int subcategoryId { get; set; }
+        public int subcategoryId { get; set; } = 0;
         public string unit { get; set; }
         public int price { get; set; }
         public int stockQuantity { get; set; }

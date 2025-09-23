@@ -246,6 +246,28 @@ namespace WPF_Admin_Front
             }
             return true;
         }
+        // user isActive frissítése
+        public async Task<bool> UpdateUserStatus(Guid userId, bool isActive)
+        {
+            SetAuthHeader();
+            string url = baseURL + $"/users/{userId}/status";
+            try
+            {
+                var content = new StringContent(
+                    JsonConvert.SerializeObject(new { isActive }),
+                    Encoding.UTF8,
+                    "application/json"
+                );
+
+                HttpResponseMessage response = await client.PutAsync(url, content);
+                return response.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hiba történt a státusz módosításakor: {ex.Message}");
+                return false;
+            }
+        }
 
 
         // ---------------------------------------Partnerek-----------------------------------------------
@@ -311,8 +333,7 @@ namespace WPF_Admin_Front
             }
             return true;
         }
-
-
+        
         // ---------------------------------------Kategóriák-----------------------------------------------
 
 
@@ -474,6 +495,68 @@ namespace WPF_Admin_Front
             }
 
             return itemsList;
+        }
+        // ---------------------------------------Rendelés státusz-----------------------------------------------
+
+        public async Task OrderAsCompletedAsync(int orderId)
+        {
+            SetAuthHeader();
+            string url = baseURL + $"/orders/{orderId}/status";
+            var requestBody = new
+            {
+                newStatus = "completed"
+            };
+            string json = JsonConvert.SerializeObject(requestBody);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+            HttpResponseMessage response = await client.PutAsync(url, content);
+            if (!response.IsSuccessStatusCode)
+            {
+                string errorText = await response.Content.ReadAsStringAsync();
+                throw new Exception($"Hiba a rendelés frissítésekor: {errorText}");
+            }
+        }
+        // ---------------------------------------Számlák-----------------------------------------------
+
+        // Invoices Get 
+        public async Task<List<Invoices>> GetInvoices()
+        {
+            SetAuthHeader();
+            List<Invoices> invoicesList = new List<Invoices>();
+            string url = baseURL + $"/invoices";
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseInString = await response.Content.ReadAsStringAsync();
+                invoicesList = JsonConvert.DeserializeObject<List<Invoices>>(responseInString);
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return invoicesList;
+        }
+        // ---------------------------------------Naplózás---------------------------------------------
+
+        // logs Get
+        public async Task<List<Logs>> GetLogs()
+        {
+            SetAuthHeader();
+            List<Logs> logsList = new List<Logs>();
+            string url = baseURL + $"/logs";
+            try
+            {
+                HttpResponseMessage response = await client.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string responseInString = await response.Content.ReadAsStringAsync();
+                logsList = JsonConvert.DeserializeObject<List<Logs>>(responseInString);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+            return logsList;
         }
 
     }

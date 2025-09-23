@@ -29,8 +29,8 @@ namespace WPF_Admin_Front
         void Products(object sender, RoutedEventArgs e) { MainContent.Content = new ProductsControl(connection); }
         void Partners(object sender, RoutedEventArgs e) { MainContent.Content = new PartnersControl(connection); }
         void Orders(object sender, RoutedEventArgs e) { MainContent.Content = new OrdersControl(connection); }
-        void Invoices(object sender, RoutedEventArgs e) { }
-        void Logs(object sender, RoutedEventArgs e) { }
+        void Invoices(object sender, RoutedEventArgs e) { MainContent.Content = new InvoicesControl(connection); }
+        void Logs(object sender, RoutedEventArgs e) { MainContent.Content = new LogsControls(connection);  }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {

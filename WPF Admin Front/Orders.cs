@@ -22,7 +22,7 @@ namespace WPF_Admin_Front
         public string orderNumber { get; set; }
         public int partnerId { get; set; }
         public string partnerName { get; set; }
-        public string userId { get; set; }
+        public Guid userId { get; set; }
         public string userName { get; set; }
         public DateTime date { get; set; }
         public string status { get; set; }

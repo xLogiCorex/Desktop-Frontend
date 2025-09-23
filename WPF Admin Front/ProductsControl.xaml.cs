@@ -83,7 +83,7 @@ namespace WPF_Admin_Front
         private void ShowProductPanel_Click(object sender, RoutedEventArgs e)
         {
             var panel = new PostProductControl(connection, categories, subcategories);
-            panel.ProductAdded += async (s, ev) => await LoadProductsAsync(); // frissül a bal oldal minden gombnyomésra
+            panel.ProductAdded += async (s, ev) => await LoadProductsAsync(); // frissül a bal oldal minden gombnyomásra
             RightPanelContent.Content = panel;
         }
 
