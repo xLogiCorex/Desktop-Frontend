@@ -71,3 +71,36 @@ C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostCategory
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostSubcategoryControl.g.cs
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostCategoryControl.baml
 C:\Users\Zsolt\Documents\Project\Desktop-Frontend\Desktop\obj\Debug\PostSubcategoryControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\bin\Debug\Desktop.exe.config
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\bin\Debug\Desktop.exe
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\bin\Debug\Desktop.pdb
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\bin\Debug\Newtonsoft.Json.dll
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\bin\Debug\Newtonsoft.Json.xml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.csproj.AssemblyReference.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.exe.config
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\LoginWindow.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\PostProductControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\LoginWindow.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\MainWindow.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\PartnersControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\PostCategoryControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\PostProductControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\PostSubcategoryControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\ProductsControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\UsersControl.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\App.g.cs
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop_MarkupCompile.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop_MarkupCompile.lref
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\MainWindow.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\PartnersControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\PostCategoryControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\PostSubcategoryControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\ProductsControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\UsersControl.baml
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.g.resources
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.Properties.Resources.resources
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.csproj.GenerateResource.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.csproj.CoreCompileInputs.cache
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.csproj.Up2Date
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.exe
+C:\Users\jambo\OneDrive\Asztali gép\2023.11.01. - Egressy képzés\2025 - Projectmunka\Desktop-Frontend2\Desktop\obj\Debug\Desktop.pdb
