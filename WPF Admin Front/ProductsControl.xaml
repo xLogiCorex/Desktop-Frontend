@@ -26,9 +26,9 @@
                 <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
                     <Label Content="Keresés:" VerticalAlignment="Center"/>
                     <TextBox x:Name="SearchBox" Width="200" Margin="10,0,0,0" VerticalAlignment="Center" TextChanged="SearchBox_TextChanged"/>
-                    <Button x:Name="EditButton" Width="40" Height="38" Margin="100,0,0,0" ToolTip="Szerkesztés" Background="#c7ecee">
+                    <!--<Button x:Name="EditButton" Width="40" Height="38" Margin="100,0,0,0" ToolTip="Szerkesztés" Background="#c7ecee">
                         <Image Source="Assets/editIcon.png" Width="40" Height="36" Stretch="Uniform"/>
-                    </Button>
+                    </Button>-->
                 </StackPanel>
 
                 <DataGrid x:Name="ProductsDataGrid"  AutoGenerateColumns="False"  IsReadOnly="False" CanUserAddRows="True" Height="380">

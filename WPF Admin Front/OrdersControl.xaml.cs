@@ -71,7 +71,8 @@ namespace WPF_Admin_Front
             {
                 var filtered = allOrders.Where(u =>
                     (u.orderNumber != null && u.orderNumber.ToLower().Contains(searchText)) ||
-                    (u.status != null && u.status.ToLower().Contains(searchText))).ToList();
+                    (u.status != null && u.status.ToLower().Contains(searchText)) ||
+                    (u.partnerName != null && u.partnerName.ToLower().Contains(searchText))).ToList();
                 OrdersDataGrid.ItemsSource = filtered;
             }
         }

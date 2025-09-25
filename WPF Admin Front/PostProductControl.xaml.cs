@@ -80,14 +80,10 @@ namespace WPF_Admin_Front
                 MessageBox.Show("Válassz mértékegységet!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-
+            int subcategoryId = 0;
             Subcategory selectedSubcategory = SubcategoryBox.SelectedItem as Subcategory;
-            if (selectedSubcategory == null)
-            {
-                MessageBox.Show("Válassz alkategóriát!", "Hiba", MessageBoxButton.OK, MessageBoxImage.Warning);
-                return;
-            }
-            int subcategoryId = selectedSubcategory.id;
+            if (selectedSubcategory != null)
+                subcategoryId = selectedSubcategory.id;
 
             if (string.IsNullOrWhiteSpace(sku) || string.IsNullOrWhiteSpace(name))
             {

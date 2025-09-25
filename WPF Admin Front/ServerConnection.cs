@@ -144,7 +144,7 @@ namespace WPF_Admin_Front
                 }
                 productList = JsonConvert.DeserializeObject<List<Product>>(response as string);
             }
-            catch (Exception e) { MessageBox.Show(e.Message); }
+            catch (Exception e) {MessageBox.Show(e.Message); }
             return productList;
         }
 
