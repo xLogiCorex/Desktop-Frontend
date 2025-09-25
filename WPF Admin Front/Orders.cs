@@ -26,7 +26,7 @@ namespace WPF_Admin_Front
         public string userName { get; set; }
         public DateTime date { get; set; }
         public string status { get; set; }
-        public int invoiceId { get; set; }
+        public int? invoiceId { get; set; }
         public string invoiceNumber { get; set; }
     }
 }

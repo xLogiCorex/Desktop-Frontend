@@ -50,7 +50,7 @@ namespace WPF_Admin_Front
                 product.categoryName = cat != null ? cat.name : "Ismeretlen";
 
                 var subcat = subcategories.FirstOrDefault(sc => sc.id == product.subcategoryId);
-                product.subcategoryName = subcat != null ? subcat.name : "Ismeretlen";
+                product.subcategoryName = subcat != null ? subcat.name : "nincs";
             }
 
             ProductsDataGrid.ItemsSource = allProduct;
